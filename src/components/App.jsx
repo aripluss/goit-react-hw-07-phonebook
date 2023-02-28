@@ -28,7 +28,7 @@ export default function App() {
 
   useEffect(() => {
     if (error) toast.error(error);
-  }, [dispatch, error]);
+  }, [error]);
 
   return (
     <>
@@ -40,7 +40,7 @@ export default function App() {
         <div className="main-container">
           <ContactForm />
 
-          {!contacts.length ? (
+          {!contacts?.length ? (
             <StyledDiv>There are no contacts in your phone book.</StyledDiv>
           ) : (
             <div className="sub-container">
